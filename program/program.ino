@@ -2,7 +2,6 @@
 AltSoftSerial BTserial; 
 
 #define RELE_PIN 3
-#define BLE_STATE 5
  
 void setup() 
 {
@@ -13,7 +12,6 @@ void setup()
     BTserial.begin(9600);  
     Serial.println("BTserial started at 9600");        
     pinMode(RELE_PIN, OUTPUT);
-    pinMode(BLE_STATE, INPUT);
 }
 void pushButton(){  
   Serial.println("push button");

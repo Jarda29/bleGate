@@ -13,6 +13,5 @@ void loop() {
     
   //read from the Serial and print to the HM-10
   if(Serial.available())
-    BT.write(Serial.read());
-  
+    BT.write(Serial.read());  
 }

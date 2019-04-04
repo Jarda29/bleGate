@@ -8,6 +8,7 @@ void setup() {
 }
 
 void loop() {  
+  //read from the BT and print to Serial
   if(BT.available())
     Serial.write(BT.read());
     

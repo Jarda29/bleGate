@@ -24,13 +24,14 @@ void pushButton(){
 bool static connected;
 void loop()
 {    
-    BTserial.write("AT+DISC?");   
-    delay(5000);
+    BTserial.write("AT+DISC?"); 
+    Serial.println("AT+DISC?");   
+    delay(2000);
       
     if (BTserial.available())
     {
         String s = BTserial.readString();
-        //Serial.println(s);    
+        Serial.println(s);    
         if(!connected && s.indexOf('001585149C09')>0) {
           connected = true;
           pushButton();
@@ -40,5 +41,5 @@ void loop()
           pushButton();
         }
     }
-    delay(5000);
+    delay(1000);
 }
